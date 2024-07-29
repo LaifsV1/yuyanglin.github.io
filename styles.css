@@ -1,0 +1,182 @@
+body {
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1E90FF;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+}
+
+.tab-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab-menu li {
+    padding: 5px 5px;
+}
+
+.tab-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 5px 10px;
+    border-right: 1px solid #bbb;
+}
+
+.tab-menu a:last-child {
+    border-right: none;
+}
+
+.tab-menu a:hover, .tab-menu a:focus {
+    background-color: #696969;
+}
+
+/* Hide all sections by default except #home */
+section {
+    display: none;
+    padding: 2em;
+}
+
+/* Display the targeted section */
+section:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Display the #home section by default */
+body:has(:not(:target)) #home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide the #home section when any other section is targeted */
+body:has(section:target:not(#home)) #home {
+    display: none;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1em;
+}
+
+.super-div {
+    width: 80%;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+/* Introduction section styling */
+.intro-section {
+    display: flex; /* Aligns the children items in a row direction */
+    justify-content: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items vertically */
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    flex: 1;
+    padding-right: 1em;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    align-self: flex-start;
+}
+
+.intro-photo {
+    /* align-self: flex-start; */
+    text-align: right;
+}
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 20%;
+}
+
+/* Media query for devices with max-width of 768px */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .intro-text {
+        width: 100%;
+        padding-right: 0;
+        align-self: center;
+        text-align: center;
+    }
+
+    .intro-photo {
+        align-self: center;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .profile-photo {
+        width: 100px; /* Smaller width for smaller screens */
+    }
+}
+
+/* PDF icon */
+
+a[href$=".pdf"]::after {
+  content: ''; /* Ensure the pseudo-element is rendered */
+  display: inline-block; /* Make the pseudo-element inline-block */
+  width: 1em; /* Set width relative to the font size */
+  height: 1em; /* Set height relative to the font size */
+  background-image: url(images/pdf-icon.svg); /* Set the background image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  vertical-align: middle; /* Align with the text */
+  margin-left: 0.3em; /* Optional: space between text and icon */
+}
+
+/* GitHub icon */
+a[href*="github.com"] {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+}
+
+a[href*="github.com"]::after {
+  content: ''; /* Ensure the pseudo-element is rendered */
+  display: inline-block; /* Make the pseudo-element inline-block */
+  width: 1em; /* Set width relative to the font size */
+  height: 1em; /* Set height relative to the font size */
+  background-image: url('images/github-mark.svg'); /* Set the background image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  vertical-align: middle; /* Align with the text */
+  margin-left: 0.3em; /* Optional: space between text and icon */
+}
+
+/* ORCID icon */
+a[href*="orcid.org"] {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+}
+
+a[href*="orcid.org"]::after {
+  content: ''; /* Ensure the pseudo-element is rendered */
+  display: inline-block; /* Make the pseudo-element inline-block */
+  width: 1em; /* Set width relative to the font size */
+  height: 1em; /* Set height relative to the font size */
+  background-image: url('images/orcid-icon.svg'); /* Set the background image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  vertical-align: middle; /* Align with the text */
+  margin-left: 0.3em; /* Optional: space between text and icon */
+}
