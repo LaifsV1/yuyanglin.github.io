@@ -181,6 +181,40 @@ a[href*="orcid.org"]::after {
   margin-left: 0.3em; /* Optional: space between text and icon */
 }
 
+/* Zenodo icon */
+a[href*="zenodo.org"] {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+}
+
+a[href*="zenodo.org"]::after {
+  content: ''; /* Ensure the pseudo-element is rendered */
+  display: inline-block; /* Make the pseudo-element inline-block */
+  width: 1em; /* Set width relative to the font size */
+  height: 1em; /* Set height relative to the font size */
+  background-image: url('images/zenodo-icon-blue.svg'); /* Set the background image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  vertical-align: middle; /* Align with the text */
+  margin-left: 0.3em; /* Optional: space between text and icon */
+}
+
+/* Arxiv icon */
+a[href*="arxiv.org"] {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+}
+
+a[href*="arxiv.org"]::after {
+  content: ''; /* Ensure the pseudo-element is rendered */
+  display: inline-block; /* Make the pseudo-element inline-block */
+  width: 1em; /* Set width relative to the font size */
+  height: 1em; /* Set height relative to the font size */
+  background-image: url('images/arxiv-logomark-small.svg'); /* Set the background image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  vertical-align: middle; /* Align with the text */
+  margin-left: 0.3em; /* Optional: space between text and icon */
+}
+
 /* EAPLS badges */
 a[eapls*="available"] {
   position: relative; /* Ensure positioning context for the pseudo-element */

@@ -186,14 +186,27 @@
         <!-- NON-REFEREED -->
         <h2>Technical Reports</h2>
         <ul>
+          <!-- arXiv rejected FSE 2026 -->
+          <li>
+            V. Koutavas, Y. -Y. Lin and N. Tzevelekos.
+            <br>
+            "A Bounded Game Semantics Checker for Precise Smart Contract Analysis".
+            <br><b>arXiv CoRR</b> arXiv:2512.22417 (2025)
+            <br>
+            <a href="https://arxiv.org/abs/2512.22417">
+              <b>DOI</b>: 10.48550/arXiv.2512.22417
+            </a>
+
+          </li>
+
           <!-- arXiv SEFM 2024 -->
           <li>
             V. Koutavas, Y. -Y. Lin and N. Tzevelekos.
             <br>
             "An Operational Semantics for Yul".
-            <br><b>arXiv CoRR</b> abs/2407.01365 (2023)
+            <br><b>arXiv CoRR</b> arXiv:2407.01365 (2023)
             <br>
-            <a href="https://doi.org/10.48550/arXiv.2407.01365">
+            <a href="https://arxiv.org/abs/2407.01365">
               <b>DOI</b>: 10.48550/arXiv.2407.01365
             </a>
 
@@ -204,9 +217,9 @@
             V. Koutavas, Y. -Y. Lin and N. Tzevelekos.
             <br>
             "Pushdown Normal-Form Bisimulation: A Nominal Context-Free Approach to Program Equivalence".
-            <br><b>arXiv CoRR</b> abs/2311.01325 (2023)
+            <br><b>arXiv CoRR</b> arXiv:2311.01325 (2023)
             <br>
-            <a href="https://doi.org/10.48550/arXiv.2311.01325">
+            <a href="https://arxiv.org/abs/2311.01325">
               <b>DOI</b>: 10.48550/arXiv.2311.01325
             </a>
 
@@ -217,9 +230,9 @@
             V. Koutavas, Y. -Y. Lin and N. Tzevelekos.
             <br>
             "Fully Abstract Normal Form Bisimulation for Call-by-Value PCF".
-            <br><b>arXiv CoRR</b> abs/2310.01069 (2023).
+            <br><b>arXiv CoRR</b> arXiv:2310.01069 (2023).
             <br>
-            <a href="https://doi.org/10.48550/arXiv.2310.01069">
+            <a href="https://arxiv.org/abs/2310.01069">
               <b>DOI</b>: 10.48550/arXiv.2310.01069
             </a>
           </li>
@@ -229,9 +242,9 @@
             V. Koutavas, Y. -Y. Lin and N. Tzevelekos. 
             <br>
             "From Bounded Checking to Verification of Program Equivalence via Symbolic Up-to Techniques".
-            <br><b>arXiv CoRR</b> abs/2105.02541 (2021).
+            <br><b>arXiv CoRR</b> arXiv:2105.02541 (2021).
             <br>
-            <a href="https://doi.org/10.48550/arXiv.2105.02541">
+            <a href="https://arxiv.org/abs/2105.02541">
               <b>DOI</b>: 10.48550/arXiv.2105.02541
             </a>
           </li>
@@ -243,7 +256,7 @@
             "Symbolic Execution Game Semantics".
             <br><b>arXiv CoRR</b> abs/2002.09115 (2020).
             <br>
-            <a href="https://doi.org/10.48550/arXiv.2002.09115">
+            <a href="https://arxiv.org/abs/2002.09115">
               <b>DOI</b>: 10.48550/arXiv.2002.09115
             </a>
           </li>
@@ -255,7 +268,7 @@
             "Higher-Order Bounded Model Checking".
             <br><b>arXiv CoRR</b> abs/1804.01836 (2018).
             <br>
-            <a href="https://doi.org/10.48550/arXiv.1804.01836">
+            <a href="https://arxiv.org/abs/1804.01836">
               <b>DOI</b>: 10.48550/arXiv.1804.01836
             </a>
           </li>
@@ -316,20 +329,45 @@
         <h2>Research Tools</h2>
         <ul>
 
-          <!-- YulTracer -->
+          <!-- YulTracer 0.2 -->
           <li>
-            <a href="https://github.com/LaifsV1/YulTracer"><b>YulTracer</b></a>
+            <a href="https://github.com/LaifsV1/YulTracer"><b>YulTracer v0.2</b></a>
+            (2026)
+            <br>
+            Game-semantics-based bounded safety (assertion) checker for Yul. This release of the tool leverages the soundness and completeness of a Game Semantics for the EVM to analyse open programs while avoiding spurious traces. Developed in OCaml and compiled using the Dune build system.
+            <ul>
+              <li>
+                <a href="https://zenodo.org/records/18280182">
+                  Initial Interpreter [0.2.0] (<b>DOI</b>: 10.5281/zenodo.18280182)
+                </a>
+              </li>
+              <li>
+                <a href="https://zenodo.org/records/17102811?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNmN2QzMTU1LWU0ZjYtNDE4MS04NzIxLWQwOTQ0ZGI2ZTNkYyIsImRhdGEiOnt9LCJyYW5kb20iOiIzNjI4YjE2YTI4MmM0ZWZjMTY5Nzg3YTBlNTE5OGU2NiJ9.-J0b-IjksahWDiAO0EFirl1oZxTqYNWbt4C5CqESTXFcA19hX2ueOJZ2_LDLRSIsxbcQIa15ob3ayX5FRwOGjQ">
+                  Tool Artefact [0.2.0] (<b>DOI</b>: 10.5281/zenodo.17102811)
+                </a>
+              </li>
+              <li>
+                <a href="https://arxiv.org/abs/2512.22417">
+                  Associated report [0.2.0] (<b>DOI</b>: arXiv:2512.22417)
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- YulTracer 0.1 -->
+          <li>
+            <a href="https://github.com/LaifsV1/YulTracer/tree/57f92027b94c89c76dd88f308a99b55b9ad9df41"><b>YulTracer v0.1</b></a>
             (2024)
             <br>
             Modular interpreter for Yul and future symbolic execution tool for Yul. Based on our own operational semantics for Yul. The interpreter is designed to be modular on so-called "dialects" and comes with a partial implementation of the EVM Execution Specification (Shanghai upgrade) as its only dialect. Developed in OCaml with Z3 bindings.
             <ul>
               <li>
-                <a href="https://doi.org/10.5281/zenodo.12098663">
-                  Initial Interpreter [Alpha 0.1.1] (<b>DOI</b>: 10.5281/zenodo.12098663)
+                <a href="https://zenodo.org/records/12511493">
+                  Initial Interpreter [Alpha 0.1.1] (<b>DOI</b>: 10.5281/zenodo.12511493)
                 </a>
               </li>
               <li>
-                <a href="https://doi.org/10.5281/zenodo.12588075">
+                <a href="https://zenodo.org/records/12588076">
                   Tool Artefact [Alpha 0.1.1] (<b>DOI</b>: 10.5281/zenodo.12588075)
                 </a>
               </li>
@@ -349,7 +387,7 @@
             Equivalence verification tool for open higher-order programs with local state based on Symbolic Execution, Pushdown Normal-Form Bisimulation which leverages the decidability of reachability in pushdown systems, and Bisimulation Up-To Techniques. Developed in OCaml with Z3 bindings.
             <ul>
               <li>
-                <a href="https://doi.org/10.5281/zenodo.11128049">
+                <a href="https://zenodo.org/records/11128050">
                   Initial Release (<b>DOI</b>: 10.5281/zenodo.11128049)
                 </a>
               </li>
@@ -369,7 +407,7 @@
             Equivalence verification tool for call-by-value <a href="https://en.wikipedia.org/wiki/Programming_Computable_Functions">PCF</a> based on Symbolic Execution, a Normal-Form Bisimulation for functional languages based on Nominal Game Semantics, and Bisimulation Up-To Techniques. Developed in OCaml with Z3 bindings.
             <ul>
               <li>
-                <a href="https://doi.org/10.5281/zenodo.7864539">
+                <a href="https://zenodo.org/records/7864540">
                 Initial Release (<b>DOI</b>: 10.5281/zenodo.7864539)
                 </a>
               </li>
@@ -389,7 +427,7 @@
             Equivalence verification tool for open higher-order programs with local state based on Symbolic Execution, a Normal-Form Bisimulation derived by combining Nominal Game Semantics with Environmental Bisimulation, and Bisimulation Up-To Techniques. Developed in OCaml with Z3 bindings.
             <ul>
               <li>
-                <a href="https://doi.org/10.5281/zenodo.7864658">
+                <a href="https://zenodo.org/records/7864659">
                 Initial Release (<b>DOI</b>: 10.5281/zenodo.7864658)
                 </a>    
               </li>
@@ -441,7 +479,7 @@
 
         </ul>
 
-        <h2>Miscellaneous</h2>
+        <h2>Others</h2>
         <ul>
 
           <!-- 2x2x3-Simple-Simulator -->
