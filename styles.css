@@ -198,6 +198,23 @@ a[href*="zenodo.org"]::after {
   margin-left: 0.3em; /* Optional: space between text and icon */
 }
 
+/* TARA icon */
+a[href*="hdl.handle.net"] {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+}
+
+a[href*="hdl.handle.net"]::after {
+  content: ''; /* Ensure the pseudo-element is rendered */
+  display: inline-block; /* Make the pseudo-element inline-block */
+  width: 1em; /* Set width relative to the font size */
+  height: 1em; /* Set height relative to the font size */
+  background-image: url('images/taralogosmall.jpg'); /* Set the background image */
+  background-size: contain; /* Ensure the image fits within the element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  vertical-align: middle; /* Align with the text */
+  margin-left: 0.3em; /* Optional: space between text and icon */
+}
+
 /* Arxiv icon */
 a[href*="arxiv.org"] {
   position: relative; /* Ensure positioning context for the pseudo-element */
