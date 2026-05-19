@@ -133,130 +133,73 @@ footer {
     }
 }
 
-/* PDF icon */
+/* Link icons: shared styling */
 
-a[href$=".pdf" i]::after,
-a[href*=".pdf?" i]::after,
-a[href*=".pdf#" i]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url(images/pdf-icon.svg); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a:is(
+  [href$=".pdf" i],
+  [href*=".pdf?" i],
+  [href*=".pdf#" i],
+  [href*="scholar.google.com" i],
+  [href*="github.com" i],
+  [href*="orcid.org" i],
+  [href*="zenodo.org" i],
+  [href*="hdl.handle.net" i],
+  [href*="arxiv.org" i],
+  [eapls]
+)::after {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: var(--link-icon);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-left: 0.3em;
 }
 
-/* Google Scholar icon */
+/* Individual icons */
 
-a[href*="scholar.google.com"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/Google_Scholar_logo.svg'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a:is([href$=".pdf" i], [href*=".pdf?" i], [href*=".pdf#" i]) {
+  --link-icon: url("images/pdf-icon.svg");
 }
 
-/* GitHub icon */
-
-a[href*="github.com"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/github-mark.svg'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a[href*="scholar.google.com" i] {
+  --link-icon: url("images/Google_Scholar_logo.svg");
 }
 
-/* ORCID icon */
-
-a[href*="orcid.org"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/orcid-icon.svg'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a[href*="github.com" i] {
+  --link-icon: url("images/github-mark.svg");
 }
 
-/* Zenodo icon */
-
-a[href*="zenodo.org"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/zenodo-icon-blue.svg'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a[href*="orcid.org" i] {
+  --link-icon: url("images/orcid-icon.svg");
 }
 
-/* TARA icon */
-
-a[href*="hdl.handle.net"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/taralogosmall.jpg'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a[href*="zenodo.org" i] {
+  --link-icon: url("images/zenodo-icon-blue.svg");
 }
 
-/* Arxiv icon */
-
-a[href*="arxiv.org"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/arxiv-logomark-small.svg'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a[href*="hdl.handle.net" i] {
+  --link-icon: url("images/taralogosmall.jpg");
 }
 
-/* EAPLS badges */
-
-a[eapls="available"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/eapls_available.png'); /* Set the background image */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+a[href*="arxiv.org" i] {
+  --link-icon: url("images/arxiv-logomark-small.svg");
 }
+
+a[eapls="available"] {
+  --link-icon: url("images/eapls_available.png");
+}
+
+/* EAPLS reusable badge: two icons */
 
 a[eapls="reusable"]::after {
-  content: ''; /* Ensure the pseudo-element is rendered */
-  display: inline-block; /* Make the pseudo-element inline-block */
-  width: 1em; /* Set width relative to the font size */
-  height: 1em; /* Set height relative to the font size */
-  background-image: url('images/eapls_available.png'), url('images/eapls_reusable.png'); /* Set the background image */
-  background-position: left, 1em; /* Adjust positions for both icons */
-  padding-left: 1em; /* Make space for both icons */
-  background-size: contain; /* Ensure the image fits within the element */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  vertical-align: middle; /* Align with the text */
-  margin-left: 0.3em; /* Optional: space between text and icon */
+  width: 2em;
+  background-image:
+    url("images/eapls_available.png"),
+    url("images/eapls_reusable.png");
+  background-size: 1em 1em, 1em 1em;
+  background-position: left center, right center;
+  background-repeat: no-repeat;
 }
