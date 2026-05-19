@@ -135,7 +135,9 @@ footer {
 
 /* PDF icon */
 
-a[href$=".pdf"]::after {
+a[href$=".pdf" i]::after,
+a[href*=".pdf?" i]::after,
+a[href*=".pdf#" i]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
   display: inline-block; /* Make the pseudo-element inline-block */
   width: 1em; /* Set width relative to the font size */
@@ -148,9 +150,6 @@ a[href$=".pdf"]::after {
 }
 
 /* Google Scholar icon */
-a[href*="scholar.google.com"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[href*="scholar.google.com"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
@@ -165,9 +164,6 @@ a[href*="scholar.google.com"]::after {
 }
 
 /* GitHub icon */
-a[href*="github.com"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[href*="github.com"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
@@ -182,9 +178,6 @@ a[href*="github.com"]::after {
 }
 
 /* ORCID icon */
-a[href*="orcid.org"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[href*="orcid.org"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
@@ -199,9 +192,6 @@ a[href*="orcid.org"]::after {
 }
 
 /* Zenodo icon */
-a[href*="zenodo.org"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[href*="zenodo.org"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
@@ -216,9 +206,6 @@ a[href*="zenodo.org"]::after {
 }
 
 /* TARA icon */
-a[href*="hdl.handle.net"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[href*="hdl.handle.net"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
@@ -233,9 +220,6 @@ a[href*="hdl.handle.net"]::after {
 }
 
 /* Arxiv icon */
-a[href*="arxiv.org"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[href*="arxiv.org"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
@@ -250,9 +234,6 @@ a[href*="arxiv.org"]::after {
 }
 
 /* EAPLS badges */
-a[eapls*="available"] {
-  position: relative; /* Ensure positioning context for the pseudo-element */
-}
 
 a[eapls="available"]::after {
   content: ''; /* Ensure the pseudo-element is rendered */
